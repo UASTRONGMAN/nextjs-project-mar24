@@ -1,14 +1,15 @@
 import React from 'react';
 import {getAllMovies} from "@/services/api.services";
 
-const MoviesPage = () => {
+const MoviesPage = async () => {
 
-    const getMovies = getAllMovies().then(value => value.results);
+    const {results} = await getAllMovies();
+
 
     return (
         <div>
             {
-                getMovies.then(value => value.map(movie => <div>{movie.title}</div>))
+                results.map(movie => <div>{movie.title}</div>)
             }
         </div>
     );
