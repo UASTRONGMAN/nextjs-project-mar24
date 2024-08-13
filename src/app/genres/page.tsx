@@ -1,5 +1,6 @@
 import React from 'react';
 import {getAllGenres} from "@/services/api.services";
+import GenresComponent from "@/components/genres/GenresComponent";
 
 const GenresPage = async () => {
 
@@ -7,10 +8,7 @@ const GenresPage = async () => {
 
     return (
         <div>
-
-            {
-                genres.map(genre => <div key={genre.id}>{genre.name}</div>)
-            }
+            <GenresComponent genres={genres}/>
         </div>
     );
 };

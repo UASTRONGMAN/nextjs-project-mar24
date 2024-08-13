@@ -1,8 +1,8 @@
 import {baseURL, urls} from "@/constants/urls";
 import {IPaginationModel} from "@/models/IPaginationModel";
-import {IGenresModel} from "@/models/IGenresModel";
+import {IGenreModel} from "@/models/IGenreModel";
 import {token} from "@/constants/token";
-import {IGenresResponceModel} from "@/models/IGenresResponceModel";
+import {IGenreResponceModel} from "@/models/IGenreResponceModel";
 
 const getAllMovies = async ():Promise<IPaginationModel> => {
     return await fetch(baseURL+urls.movies.base, {
@@ -13,7 +13,7 @@ const getAllMovies = async ():Promise<IPaginationModel> => {
         .then(value => value.json())
 }
 
-const getAllGenres = async ():Promise<IGenresResponceModel> => {
+const getAllGenres = async ():Promise<IGenreResponceModel> => {
     return await fetch(baseURL+urls.genres.base, {
         method: 'GET',
         headers:{

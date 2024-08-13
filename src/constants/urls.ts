@@ -6,6 +6,9 @@ const urls = {
     },
     genres: {
         base: `/genre/movie/list`
+    },
+    image: {
+        base: 'https://image.tmdb.org/t/p/w500'
     }
 };
 

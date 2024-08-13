@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from "next/link";
+import css from './header.module.css'
 
 const HeaderComponent = () => {
     return (
-        <div>
+        <div className={css.header}>
             <Link href={'/'}>Home</Link>
             <Link href={'/genres'}>Genres</Link>
             <form>

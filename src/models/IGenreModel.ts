@@ -1,4 +1,4 @@
-export interface IGenresModel{
+export interface IGenreModel {
     id: number,
     name: string
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import {getAllMovies} from "@/services/api.services";
+import MoviesComponent from "@/components/movies/MoviesComponent";
 
 const MoviesPage = async () => {
 
@@ -8,9 +9,7 @@ const MoviesPage = async () => {
 
     return (
         <div>
-            {
-                results.map(movie => <div>{movie.title}</div>)
-            }
+            <MoviesComponent movies={results}/>
         </div>
     );
 };
