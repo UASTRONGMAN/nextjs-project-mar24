@@ -22,7 +22,17 @@ const getAllGenres = async ():Promise<IGenreResponceModel> => {
         .then(value => value.json())
 }
 
+const pagination = async (page: string ='1'):Promise<IPaginationModel> => {
+    return await fetch(baseURL+urls.page.base+page, {
+        method: 'GET',
+        headers:{
+            Authorization: token
+        }})
+        .then(value => value.json())
+}
+
 export {
     getAllMovies,
-    getAllGenres
+    getAllGenres,
+    pagination
 }

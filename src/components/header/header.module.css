@@ -1,4 +1,17 @@
 .header{
     display: flex;
+    background-color: mediumpurple;
     flex-direction: row;
+    width: 70vw;
+    justify-content: space-evenly;
+    height: 5vh;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header a{
+    display: block;
+    width: 20vw;
+    font-size: 30px;
+    text-decoration: none;
 }
